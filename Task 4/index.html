@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Blog</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="flex-center container">
+        <h1>Blog</h1>
+        <ul class="flex-center">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger-menu">&#9776;</div>
+      </div>
+    </header>
+    <main>
+      <section class="home container">
+        <div class="filter flex-center">
+          <div class="search flex-center">
+            <input type="text" placeholder="Search posts..." />
+          </div>
+
+          <ul class="filter-tags flex-center">
+            <li><a href class="active" data-filter="All">All</a></li>
+            <li><a href data-filter="Tech">Tech</a></li>
+            <li><a href data-filter="Travel">Travel</a></li>
+            <li><a href data-filter="Food">Food</a></li>
+            <li><a href data-filter="Lifestyle">Lifestyle</a></li>
+          </ul>
+        </div>
+
+        <div class="post-container container">
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=1"
+              alt="image from picsum"
+            />
+            <h1>Latest Tech Innovations</h1>
+            <p class="post-description">
+              Exploring new gadgets and emerging technologies.
+            </p>
+            <p class="tag">Tech</p>
+            <div class="post-last flex-center">
+              <p class="post-date">12/02/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=2"
+              alt="image from picsum"
+            />
+            <h1>Top Travel Destinations 2025</h1>
+            <p class="post-description">
+              A list of must-visit places around the world.
+            </p>
+            <p class="tag">Travel</p>
+            <div class="post-last flex-center">
+              <p class="post-date">18/03/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=3"
+              alt="image from picsum"
+            />
+            <h1>Healthy Food Recipes</h1>
+            <p class="post-description">
+              Quick and delicious meals you can make at home.
+            </p>
+            <p class="tag">Food</p>
+            <div class="post-last flex-center">
+              <p class="post-date">07/04/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=4"
+              alt="image from picsum"
+            />
+            <h1>Lifestyle Tips for Students</h1>
+            <p class="post-description">
+              Improve productivity and balance with these habits.
+            </p>
+            <p class="tag">Lifestyle</p>
+            <div class="post-last flex-center">
+              <p class="post-date">15/05/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=5"
+              alt="image from picsum"
+            />
+            <h1>Best Laptops of 2025</h1>
+            <p class="post-description">
+              Comparing performance, design, and price.
+            </p>
+            <p class="tag">Tech</p>
+            <div class="post-last flex-center">
+              <p class="post-date">01/06/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=6"
+              alt="image from picsum"
+            />
+            <h1>Backpacking Across Europe</h1>
+            <p class="post-description">
+              An adventure through cities, nature, and cultures.
+            </p>
+            <p class="tag">Travel</p>
+            <div class="post-last flex-center">
+              <p class="post-date">10/07/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=7"
+              alt="image from picsum"
+            />
+            <h1>Street Food You Must Try</h1>
+            <p class="post-description">
+              From tacos to kebabs, a guide to the best bites.
+            </p>
+            <p class="tag">Food</p>
+            <div class="post-last flex-center">
+              <p class="post-date">20/08/2025</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <img
+              src="https://picsum.photos/200?random=8"
+              alt="image from picsum"
+            />
+            <h1>Morning Routines for Success</h1>
+            <p class="post-description">
+              Simple habits to kickstart your day positively.
+            </p>
+            <p class="tag">Lifestyle</p>
+            <div class="post-last flex-center">
+              <p class="post-date">30/09/2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="posts-nav flex-center">
+          <button>Previous</button>
+          <p>Page 1 of 3</p>
+          <button>Next</button>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

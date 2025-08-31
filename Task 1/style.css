@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: cadetblue;
+  width: 200px;
+  transition: width 0.5s ease;
+  justify-content: center;
+}
+.logo {
+  background-color: gray;
+  font-size: 1.5rem;
+  height: 160px;
+  font-weight: bold;
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+.sidebar.collapsed .logo {
+  font-size: 0.6rem;
+  height: 45px;
+}
+.nav-links a {
+  display: flex;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 20px 8px;
+  align-items: center;
+  color: azure;
+  transition: color 0.3s ease;
+}
+.nav-links a span {
+  padding: 0 4px;
+}
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.nav-links a:hover .icon {
+  animation: wobble 0.9s ease;
+}
+.nav-links a:hover {
+  color: burlywood;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.toggle {
+  position: fixed;
+  top: 1rem;
+  left: 230px;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  outline: none;
+}
+
+.toggle:hover {
+  background-color: cadetblue;
+}
+.toggle.active {
+  background-color: black;
+}
+.sidebar.collapsed ~ .toggle {
+  left: 70px;
+}
+.content {
+  margin-left: 250px;
+  padding: 0.75rem 2rem;
+  transition: margin-left 0.3s ease;
+}
+.sidebar.collapsed ~ .content {
+  margin-left: 90px;
+}
+.sidebar.collapsed .nav-links a span + * {
+  display: none;
+}
+.sidebar.collapsed .label {
+  display: none;
+}
+@media (max-width: 600px) {
+  .sidebar.collapsed {
+    width: 0;
+  }
+  .sidebar.collapsed a,
+  .sidebar.collapsed .logo {
+    display: none;
+  }
+  .sidebar.collapsed ~ .toggle {
+    left: 20px;
+  }
+  .sidebar.collapsed ~ .content {
+    margin-left: 45px;
+  }
+}
